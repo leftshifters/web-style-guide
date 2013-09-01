@@ -69,31 +69,27 @@ Don't use variable names that only programmers can understand like `str` or `cha
 
 Give specific names when the sitation demands so, like: 
 
-`engines` is a container for all kinds of engines
-
-`petrolEngines` contains a subset of engines whose fuel is petrol
-
-`dieselEngines` contains a subset of engines whose fuel is diesel
-
+```javascript
+var engines;      // container for all kinds of engines
+var petrolEngines;  // container for a subset of engines that gulp petrol
+var dieselEngines;  // container for a subset of engines that gulp diesel
+```
 
 #### Functions
 Function names should convey some action like verbs.
 
-`run()`
-
-`captureStream()`
-
-`checkInCache()`
+```javascript
+run();
+captureStream();
+checkInCache();
+```
 
 Function names should give a hint of the return type
 
-```
+```javascript
 isValid()           // true/false
-
 canContinue()       // true/false
-
 getUsers()          // array of objects
-
 getFriendCount()    // number
 ```
 
@@ -142,7 +138,7 @@ var caz = /\d/;
 
 __Note: new Date() is fine__
 
-## Casing
+### Casing
 Use `lowerCamelCase` for multiword identifiers when they refer to objects, functions, methods, members, or anything not specified in this section.
 
 Use `UpperCamelCase` for class names (things that you'd pass to "new").
@@ -237,6 +233,8 @@ setTimeout(function doFoo() {
 }, 1000);
 ```
 
+### Semicolons / ASI
+
 ### Errors
 Always create a new Error object with your message. Don't just return a string message to the callback. Stack traces are handy.
 
@@ -244,6 +242,6 @@ Always create a new Error object with your message. Don't just return a string m
 
 ## Styles
 
-## Attribution
+## Attributions ©
 
 [NPM's "funny" coding style](https://npmjs.org/doc/coding-style.html)
