@@ -70,7 +70,7 @@ Don't use variable names that only programmers can understand like `str` or `cha
 Give specific names when the sitation demands so, like: 
 
 ```javascript
-var engines;      // container for all kinds of engines
+var engines;        // container for all kinds of engines
 var petrolEngines;  // container for a subset of engines that gulp petrol
 var dieselEngines;  // container for a subset of engines that gulp diesel
 ```
