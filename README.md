@@ -115,6 +115,10 @@ var bar = '!';
 var baz, caz;
 ```
 
+* Boolean variables and functions should always be either true or false. Don't set it to 0 unless it's supposed to be a number.
+* When something is intentionally missing or removed, set it to null.
+* Don't set things to undefined. Reserve that value to mean "not yet set to anything."
+
 ### Literal Syntax
 
 Always use literal syntax to allocate Objects, Arrays, Booleans, Strings
@@ -188,6 +192,10 @@ while (foo) {
 ```
 
 ### Whitespace
+
+Put a single space in front of ( for anything other than a function call. Also use a single space wherever it makes things more readable.
+
+Don't leave trailing whitespace at the end of lines. Don't indent empty lines. Don't use more spaces than are helpful.
 
 Bad
 ```javascript
