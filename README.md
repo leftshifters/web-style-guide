@@ -115,9 +115,11 @@ var bar = '!';
 var baz, caz;
 ```
 
-* Boolean variables and functions should always be either true or false. Don't set it to 0 unless it's supposed to be a number.
-* When something is intentionally missing or removed, set it to null.
-* Don't set things to undefined. Reserve that value to mean "not yet set to anything."
+Boolean variables and functions should always be either true or false. Don't set it to 0 unless it's supposed to be a number.
+
+When something is intentionally missing or removed, set it to null.
+
+Don't set things to undefined. Reserve that value to mean "not yet set to anything."
 
 ### Literal Syntax
 
