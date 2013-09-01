@@ -22,7 +22,7 @@ How to configure your editor:
 1. Sublime Text
 2. Vi or (Vi IMproved)
 
-Use tools like `js-beautify` to automatically format your code as configured. Run it with git pre-commit hook to make sure all your committed code is always formatted.
+Use tools like [js-beautify](https://github.com/einars/js-beautify) to automatically format your code as configured. Run it with git pre-commit hook to make sure all your committed code is always formatted.
 
 ## Line Length
 Try to fit your lines in 80 characters. This prevents horizontal scrolling and makes the code clean & more readable. Editors usually show the column number in status bars. If you are using Submile Text, add `"rulers": [80]` in your preferences file to mark the 80'th column.
@@ -246,4 +246,4 @@ Always create a new Error object with your message. Don't just return a string m
 
 ## Attribution
 
-NPM's "funny" coding style
+[NPM's "funny" coding style](https://npmjs.org/doc/coding-style.html)
