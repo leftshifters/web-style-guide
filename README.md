@@ -19,8 +19,8 @@ Use 2 spaces. Configure your editor to automatically convert tabs to spaces.
 
 How to configure your editor:
 
-1. Sublime Text
-2. Vi or (Vi IMproved)
+1. [Sublime Text](https://github.com/vxtindia/web-style-guide/wiki/Editor-Configuration#sublime-text)
+2. [Vi or (Vi IMproved)](https://github.com/vxtindia/web-style-guide/wiki/Editor-Configuration#vi)
 
 Use tools like [js-beautify](https://github.com/einars/js-beautify) to automatically format your code as configured. Run it with git pre-commit hook to make sure all your committed code is always formatted.
 
