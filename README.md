@@ -67,7 +67,7 @@ If your software brews coffee, use an apt name
 
 Don't use variable names that only programmers can understand like `str` or `char` or `data` or `dbResults`. Instead the name should say what kind of data it expects, like `comment` or `rating` or `likes` or `products`
 
-Give specific names when the sitation demands so, like: 
+Give specific names when the sitation demands so, like:
 
 ```javascript
 var engines;        // container for all kinds of engines
@@ -96,6 +96,52 @@ getFriendCount()    // number
 #### Constructors
 #### Constants
 #### Objects
+#### Public & Private variables
+Follow the usual variable naming convention for local variables of a class. When using CommonJS (node.js), to make whatever objects/primitives public, just attach them to the exports object (or module.exports). No need to use `_` for denoting private variables.
+
+```javascript
+var fs = require('fs');
+
+// Public method
+// Whoever is reading this code can easily identify this as a public method
+// as this is being attached to the exports object
+exports.exists = function(path) {
+    return pathExists(path);
+};
+
+
+// Private method
+// Automtically becomes private as this is not under the exports namespace
+// Will not be accessible outside of this module
+function pathExists() {
+    return fs.existsSync(path);
+}
+```
+
+When using AMD (require.js), to make whatever objects/primitives public, just return those from the function
+
+```javascript
+require(['user'], function(User) {
+
+    // Remains private
+    var users = [];
+
+    function addUser(name) {
+        var user = new User(name);
+        users.push(user);
+    }
+
+    function getUserCount() {
+        return users.length;
+    }
+
+    // Maintain your public/private relationships nicely
+    return {
+        addUser: addUser,
+        getUserCount: getUserCount
+    };
+});
+```
 
 ### Declaration
 If assigning, declare each variable in its own line
