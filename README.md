@@ -291,6 +291,9 @@ setTimeout(function doFoo() {
 
 ### Semicolons / ASI
 
+### Magic Numbers
+[What is a Magic Number? Why is it bad?](http://stackoverflow.com/questions/47882/what-is-a-magic-number-and-why-is-it-bad)
+
 ### Errors
 Always create a new Error object with your message. Don't just return a string message to the callback. Stack traces are handy.
 
