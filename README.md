@@ -294,6 +294,33 @@ setTimeout(function doFoo() {
 ### Magic Numbers
 [What is a Magic Number? Why is it bad?](http://stackoverflow.com/questions/47882/what-is-a-magic-number-and-why-is-it-bad)
 
+### Event Handling
+Do not write logic directly inside your event handlers. Delegate. Call other methods from here that contain logic. This automatically makes your code testable by any test framework. Promotes code re-use and cleanly separates your concerns. Please follow this, you'll have more time for fun.
+
+Bad
+
+```javascript
+$('.clickme').on('click', function(e) {
+    e.preventDefault();
+    // Cumbersome to test, without triggering/faking browser events
+    console.log("Thank you for clicking me!");
+});
+```
+
+Good
+
+```javascript
+$('.clickme').on('click', function(e) {
+    e.preventDefault();
+    onClick();
+});
+
+// Following method becomes testable
+function onClick() {
+   console.log("Thank you for clicking me!");
+}
+```
+
 ### Errors
 Always create a new Error object with your message. Don't just return a string message to the callback. Stack traces are handy.
 
@@ -304,3 +331,5 @@ Always create a new Error object with your message. Don't just return a string m
 ## Attributions ©
 
 [NPM's "funny" coding style](https://npmjs.org/doc/coding-style.html)
+
+[Burhan](https://github.com/burhan363)'s work on Best Practices
